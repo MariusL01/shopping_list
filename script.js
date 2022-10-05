@@ -74,8 +74,7 @@ function sortDesc() {
 
 function deleteList() {
   const items = document.querySelectorAll(".item");
-  for (let i = 1; i <= items.length - 1; i++) {
-    items[i].remove();
-  }
+  [...items].slice(1).forEach((item) => item.remove());
+  console.log(items);
   listEl.style.display = "none";
 }
